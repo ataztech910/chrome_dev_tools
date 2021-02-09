@@ -1,0 +1,29 @@
+{
+  "name": "Dev tools marker",
+  "version": "2",
+  "description": "Dev tools marker",
+  "permissions": [
+    "activeTab",
+    "declarativeContent"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Dev tools marker Extension"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "css": [
+        "imageMarker.css"
+      ],
+      "js": [
+        "imageMarker.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
